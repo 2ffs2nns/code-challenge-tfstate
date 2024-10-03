@@ -1,8 +1,3 @@
-provider "google" {
-  project = var.project_id
-  region  = var.region
-}
-
 resource "google_storage_bucket" "tfstate_bucket" {
   #checkov:skip=CKV_GCP_62:Bucket should log access
   name          = "${var.project_id}-tfstate"
