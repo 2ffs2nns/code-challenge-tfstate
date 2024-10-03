@@ -34,6 +34,13 @@ python wrapper.py plan --var_file=development.tfvars --gcloud_env=development --
 python wrapper.py apply --var_file=development.tfvars --gcloud_env=development --project_name=code-challenge-tfstate
 ```
 
+If everything comes together, a typical folder structure with multiple projects would look like the following.
+
+
+<div align=center>
+<img src="remote-tfstate.png" alt="remote-tfstate" width="300"/>
+</div>
+
 <!-- BEGIN_TF_DOCS -->
 # Terraform
 
