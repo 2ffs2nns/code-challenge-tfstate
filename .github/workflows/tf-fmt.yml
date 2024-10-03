@@ -1,0 +1,16 @@
+name: tf-fmt
+
+on: [pull_request]
+permissions: read-all
+
+jobs:
+  check_format:
+    runs-on: ubuntu-latest
+    name: terraform fmt
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: terraform fmt
+        uses: dflook/terraform-fmt-check@v1
+        id: fmt-check
