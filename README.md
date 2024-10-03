@@ -34,6 +34,13 @@ python wrapper.py plan --var_file=development.tfvars --gcloud_env=development --
 python wrapper.py apply --var_file=development.tfvars --gcloud_env=development --project_name=code-challenge-tfstate
 ```
 
+If everything comes together, a typical folder structure with multiple projects would look like the following.
+
+
+<div align=center>
+<img src="remote-tfstate.png" alt="remote-tfstate" width="300"/>
+</div>
+
 <!-- BEGIN_TF_DOCS -->
 # Terraform
 
@@ -47,9 +54,7 @@ python wrapper.py apply --var_file=development.tfvars --gcloud_env=development -
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_gcloud_env"></a> [gcloud\_env](#input\_gcloud\_env) | Environment to deploy into. ie production, staging, development | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Default gcloud project to launch this cluster into | `string` | n/a | yes |
-| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name, typically the git repository | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | Default region | `string` | `"us-central1"` | no |
 | <a name="input_service_account_name"></a> [service\_account\_name](#input\_service\_account\_name) | gcloud service account name to use. | `string` | `"terraform"` | no |
 | <a name="input_skip_service_account_creation"></a> [skip\_service\_account\_creation](#input\_skip\_service\_account\_creation) | Ignore creating new service account if the name already exists. | `bool` | `true` | no |
