@@ -4,7 +4,7 @@ This repo creates the GCS backend to manage Terraform remote state. The bucket h
 
 ## Deployment
 
-This is a chicken/egg issue with a remote-state backend. The bucket needs to be created/existing before Terraform can store it's state. I recommend commenting out the `backend.tf` config, then manually runnnig Terraform commands to create the bucket. 
+This is a chicken/egg issue with a remote-state backend. The bucket needs to be created/existing before Terraform can store it's state. I recommend commenting out the `backend.tf` config, then manually running Terraform commands to create the bucket. 
 
 Then, once the bucket is created, uncomment out `backend.tf` and update the `bucket` attribute with the newly minted GCS bucket name.
 
